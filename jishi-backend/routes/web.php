@@ -1,5 +1,6 @@
 <?php
 
+$DishServerIp = '127.0.0.10';
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +14,8 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/recommendDish', function () {
+    return view('recommendDish');
 });
