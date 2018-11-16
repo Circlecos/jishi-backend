@@ -17,5 +17,6 @@ Route::get('/', function () {
 });
 
 Route::get('/recommendDish', function () {
-    return view('recommendDish');
+    return Response(view('recommendDish'))
+        ->header('content-type','application/json');
 });
