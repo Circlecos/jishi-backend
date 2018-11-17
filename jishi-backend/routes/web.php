@@ -16,7 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/recommendDish', function () {
-    return Response(view('recommendDish'))
-        ->header('content-type','application/json');
-});
+
+Route::post('/recommend','DishesController@recommend');
+
+// Route::get('/recommendDish', function () {
+//     return Response(view('recommendDish'))
+//         ->header('content-type','application/json');
+// });

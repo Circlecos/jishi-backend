@@ -13,5 +13,6 @@ def hello_world():
 def recommendDish():
     data = request.get_data()
     json_re = json.loads(data)
+    
     return Response(json.dumps(json_re,ensure_ascii=False)
                     ,content_type='application/json')
